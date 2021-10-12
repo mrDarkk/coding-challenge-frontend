@@ -18,6 +18,7 @@ const DataTable = props => {
             <th> DOB </th>
             <th> DOR </th>
             <th>Actions</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -32,7 +33,6 @@ const DataTable = props => {
                 
                 <td>{ user.dateOfBirth}</td>
                 <td>{user.registeredAt}</td>
-                {/* <td>{user.last_name}</td> */}
                 <td className="field-actions">
                   <button
                     className="primary-btn"
@@ -42,7 +42,10 @@ const DataTable = props => {
                   >
                     Update
                   </button>
-                  <button
+                 
+                </td>
+                <td className="field-actions">
+                <button
                     className="field-actions__delete"
                     onClick={() => props.deleteRow(user)}
                   >
