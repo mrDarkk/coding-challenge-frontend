@@ -8,6 +8,7 @@ function getUsers() {
   return response;
 }
 
+
 function getCreatedUser(user) {
   const response = axios.post(`${apiURL}/users`, {
   
@@ -15,7 +16,7 @@ function getCreatedUser(user) {
     email: user.email,
     gender: user.gender,
     surveys: null,
-    dateOfBirth: user.dateOfBirth,
+    dateOfBirth: new Date(user.dateOfBirth).toISOString(),
   });
   
   return response;
@@ -29,7 +30,7 @@ function getUpdatedUser(id, user) {
     name: user.name,
     gender: user.gender,
     surveys: user.surveys,
-    dateOfBirth: user.dateOfBirth,
+    dateOfBirth: new Date(user.dateOfBirth).toISOString(),
   });
 
   return response;

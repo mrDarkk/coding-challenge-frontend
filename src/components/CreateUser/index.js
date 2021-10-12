@@ -53,7 +53,7 @@ const CreateUser = props => {
       <div className="form-group">
         <label>dateOfBirth</label>
         <input
-          type="datetime"
+          type="text"
           name="dateOfBirth"
           value={user.dateOfBirth}
           onChange={onInputChange}
