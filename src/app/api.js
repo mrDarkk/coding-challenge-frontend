@@ -16,7 +16,7 @@ function getCreatedUser(user) {
     email: user.email,
     gender: user.gender,
     surveys: null,
-    dateOfBirth: new Date(user.dateOfBirth).toISOString(),
+    dateOfBirth: user.dateOfBirth,
   });
   
   return response;
@@ -30,7 +30,7 @@ function getUpdatedUser(id, user) {
     name: user.name,
     gender: user.gender,
     surveys: user.surveys,
-    dateOfBirth: new Date(user.dateOfBirth).toISOString(),
+    dateOfBirth: user.dateOfBirth,
   });
 
   return response;
