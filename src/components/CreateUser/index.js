@@ -28,6 +28,7 @@ const CreateUser = props => {
         <input
           type="text"
           name="name"
+          required
           value={user.name}
           onChange={onInputChange}
         />
@@ -37,6 +38,8 @@ const CreateUser = props => {
         <input
           type="email"
           name="email"
+          placeholder="email@gmail.com"
+          required
           value={user.email}
           onChange={onInputChange}
         />
@@ -46,15 +49,19 @@ const CreateUser = props => {
         <input
           type="text"
           name="gender"
+          
+          required
           value={user.gender}
           onChange={onInputChange}
         />
       </div>
       <div className="form-group">
-        <label>dateOfBirth</label>
+        <label>dateOfBirth(DD/MM/YYYY)</label>
         <input
           type="text"
           name="dateOfBirth"
+          required
+          placeholder="DD/MM/YYYY"
           value={user.dateOfBirth}
           onChange={onInputChange}
         />

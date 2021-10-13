@@ -30,6 +30,7 @@ const UpdateUser = props => {
         <input
           type="text"
           name="name"
+          required
           value={user.name}
           onChange={onInputChange}
         />
@@ -40,6 +41,7 @@ const UpdateUser = props => {
         <input
           type="email"
           name="email"
+          required
           value={user.email}
           onChange={onInputChange}
         />
@@ -49,15 +51,18 @@ const UpdateUser = props => {
         <input
           type="text"
           name="gender"
+          required
           value={user.gender}
           onChange={onInputChange}
         />
       </div>
       <div className="form-group">
-        <label>dateOfBirth</label>
+        <label>dateOfBirth(DD/MM/YYYY)</label>
         <input
           type="text"
           name="dateOfBirth"
+          placeholder="DD/MM/YYYY"
+          required
           value={user.dateOfBirth}
           onChange={onInputChange}
         />
